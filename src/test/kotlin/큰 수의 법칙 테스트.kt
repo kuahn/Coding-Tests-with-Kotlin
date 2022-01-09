@@ -3,12 +3,10 @@ import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import kotlin.test.assertEquals
-import kotlin.time.ExperimentalTime
 
 
 internal class `큰 수의 법칙 테스트` {
 
-    @OptIn(ExperimentalTime::class)
     @Test
     fun `method1 - 5 8 3, 2 4 5 4 6 성공`() {
         val userInput = "5 8 3"
