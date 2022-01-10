@@ -1,6 +1,3 @@
-import kotlin.time.ExperimentalTime
-import kotlin.time.measureTimedValue
-
 class `큰 수의 법칙` {
     fun method() {
         var (n, m, k) = readLine()!!.split(" ".toRegex()).map(String::toInt)
