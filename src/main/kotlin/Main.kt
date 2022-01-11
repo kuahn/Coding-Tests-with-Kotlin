@@ -5,15 +5,15 @@ import kotlin.time.measureTimedValue
 @OptIn(ExperimentalTime::class)
 fun main(args: Array<String>) {
     val timedValue = measureTimedValue {
-        val userInput = "5 8 3"
+        val userInput = "5"
             .plus(System.lineSeparator())
-            .plus("2 4 5 4 6")
+            .plus("R R R R D D L L")
             .plus(System.lineSeparator())
 
         val bais = ByteArrayInputStream(userInput.toByteArray())
         System.setIn(bais)
 
-        `큰 수의 법칙`().method()
+        상하좌우().method()
     }
 
     println()
