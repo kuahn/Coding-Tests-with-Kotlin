@@ -27,6 +27,6 @@ class `왕실의 나이트` {
             }
         }
 
-        println(result)
+        print(result)
     }
 }
