@@ -5,15 +5,12 @@ import kotlin.time.measureTimedValue
 @OptIn(ExperimentalTime::class)
 fun main(args: Array<String>) {
     val timedValue = measureTimedValue {
-        val userInput = "5"
-            .plus(System.lineSeparator())
-            .plus("R R R R D D L L")
-            .plus(System.lineSeparator())
+        val userInput = "d4"
 
         val bais = ByteArrayInputStream(userInput.toByteArray())
         System.setIn(bais)
 
-        상하좌우().method()
+        `왕실의 나이트`().method()
     }
 
     println()
