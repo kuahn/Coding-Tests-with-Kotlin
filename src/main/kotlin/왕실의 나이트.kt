@@ -4,14 +4,14 @@ class `왕실의 나이트` {
         val row = Character.getNumericValue(n[1])
         val column = n[0].code - 'a'.code + 1
         val steps = arrayOf(
-            byteArrayOf(-2, -1),
-            byteArrayOf(-2, 1),
-            byteArrayOf(2, -1),
-            byteArrayOf(2, 1),
-            byteArrayOf(-1, -2),
-            byteArrayOf(-1, 2),
-            byteArrayOf(1, -2),
-            byteArrayOf(1, 2),
+            shortArrayOf(-2, -1),
+            shortArrayOf(-2, 1),
+            shortArrayOf(2, -1),
+            shortArrayOf(2, 1),
+            shortArrayOf(-1, -2),
+            shortArrayOf(-1, 2),
+            shortArrayOf(1, -2),
+            shortArrayOf(1, 2),
         )
 
         var result = 0
