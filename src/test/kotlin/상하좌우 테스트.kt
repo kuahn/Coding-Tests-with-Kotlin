@@ -3,7 +3,7 @@ import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 
-internal class 상하좌우Test {
+internal class `상하좌우 테스트` {
 
     @Test
     fun `method - 5, R R R R D D L L U, 2 3 성공`() {

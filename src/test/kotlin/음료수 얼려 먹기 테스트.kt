@@ -1,10 +1,13 @@
+import org.junit.jupiter.api.Test
 import java.io.ByteArrayInputStream
-import kotlin.time.ExperimentalTime
-import kotlin.time.measureTimedValue
+import java.io.ByteArrayOutputStream
+import java.io.PrintStream
+import kotlin.test.assertEquals
 
-@OptIn(ExperimentalTime::class)
-fun main(args: Array<String>) {
-    val timedValue = measureTimedValue {
+internal class `음료수 얼려 먹기 테스트` {
+
+    @Test
+    fun `method - 15 14, 결과 8 성공`() {
         val userInput = "15 14"
             .plus(System.lineSeparator()).plus("00000111100000")
             .plus(System.lineSeparator()).plus("11111101111110")
@@ -24,11 +27,12 @@ fun main(args: Array<String>) {
             .plus(System.lineSeparator())
 
         val bais = ByteArrayInputStream(userInput.toByteArray())
+        val baos = ByteArrayOutputStream()
         System.setIn(bais)
+        System.setOut(PrintStream(baos))
 
         `음료수 얼려 먹기`().method()
-    }
 
-    println()
-    println("this operation took ${timedValue.duration}")
+        assertEquals(expected = 8, actual = baos.toString().toInt())
+    }
 }
