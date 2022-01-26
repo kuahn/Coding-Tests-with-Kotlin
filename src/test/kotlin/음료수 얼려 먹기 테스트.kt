@@ -35,4 +35,42 @@ internal class `음료수 얼려 먹기 테스트` {
 
         assertEquals(expected = 8, actual = baos.toString().toInt())
     }
+
+    @Test
+    fun `method - 3 14, 결과 1 성공`() {
+        val userInput = "3 14"
+            .plus(System.lineSeparator()).plus("00000000000000")
+            .plus(System.lineSeparator()).plus("11111000011111")
+            .plus(System.lineSeparator()).plus("00000000000000")
+            .plus(System.lineSeparator())
+
+        val bais = ByteArrayInputStream(userInput.toByteArray())
+        val baos = ByteArrayOutputStream()
+        System.setIn(bais)
+        System.setOut(PrintStream(baos))
+
+        `음료수 얼려 먹기`().method()
+
+        assertEquals(expected = 1, actual = baos.toString().toInt())
+    }
+
+    @Test
+    fun `method - 5 5, 결과 3 성공`() {
+        val userInput = "5 5"
+            .plus(System.lineSeparator()).plus("00011")
+            .plus(System.lineSeparator()).plus("11100")
+            .plus(System.lineSeparator()).plus("11111")
+            .plus(System.lineSeparator()).plus("11100")
+            .plus(System.lineSeparator()).plus("11100")
+            .plus(System.lineSeparator())
+
+        val bais = ByteArrayInputStream(userInput.toByteArray())
+        val baos = ByteArrayOutputStream()
+        System.setIn(bais)
+        System.setOut(PrintStream(baos))
+
+        `음료수 얼려 먹기`().method()
+
+        assertEquals(expected = 3, actual = baos.toString().toInt())
+    }
 }
