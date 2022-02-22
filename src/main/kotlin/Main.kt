@@ -3,18 +3,15 @@ import kotlin.time.ExperimentalTime
 import kotlin.time.measureTimedValue
 
 @OptIn(ExperimentalTime::class)
-fun main(args: Array<String>) {
+fun main() {
     val timedValue = measureTimedValue {
-        val userInput = "3"
-            .plus(System.lineSeparator()).plus("15")
-            .plus(System.lineSeparator()).plus("27")
-            .plus(System.lineSeparator()).plus("12")
-            .plus(System.lineSeparator())
+        val userInput = "10 19"
+            .plus(System.lineSeparator()).plus("1 3 5 7 9 11 13 15 17 19")
 
         val bais = ByteArrayInputStream(userInput.toByteArray())
         System.setIn(bais)
 
-        `위에서 아래로`().method()
+        `반복문으로 구현한 이진 탐색`().method()
     }
 
     println()
