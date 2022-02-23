@@ -34,4 +34,19 @@ internal class `반복문으로 구현한 이진 탐색 테스트` {
 
         kotlin.test.assertEquals(expected = 10, actual = baos.toString().toInt())
     }
+
+    @Test
+    fun `method - 10 8, 없음 성공`() {
+        val userInput = "10 8"
+            .plus(System.lineSeparator()).plus("1 3 5 7 9 11 13 15 17 19")
+
+        val bais = ByteArrayInputStream(userInput.toByteArray())
+        val baos = ByteArrayOutputStream()
+        System.setIn(bais)
+        System.setOut(PrintStream(baos))
+
+        `반복문으로 구현한 이진 탐색`().method()
+
+        kotlin.test.assertEquals(expected = "원소가 존재하지 않습니다.", actual = baos.toString())
+    }
 }
