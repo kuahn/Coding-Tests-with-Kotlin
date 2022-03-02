@@ -7,6 +7,25 @@ import kotlin.test.assertEquals
 
 class `부품 찾기 테스트` {
     @Test
+    fun `countingSort - 5, 8 3 7 9 2, 3, 5 7 9 성공`() {
+        val userInput = "5"
+            .plus(System.lineSeparator()).plus("8 3 7 9 2")
+            .plus(System.lineSeparator()).plus("3")
+            .plus(System.lineSeparator()).plus("5 7 9")
+            .plus(System.lineSeparator())
+
+        val bais = ByteArrayInputStream(userInput.toByteArray())
+        val baos = ByteArrayOutputStream()
+
+        System.setIn(bais)
+        System.setOut(PrintStream(baos))
+
+        `부품 찾기`().CountingSortMethod()
+
+        assertEquals(expected = "NO YES YES ", actual = baos.toString())
+    }
+
+    @Test
     fun `binarySearchMethod - 5, 8 3 7 9 2, 3, 5 7 9 성공`() {
         val userInput = "5"
             .plus(System.lineSeparator()).plus("8 3 7 9 2")
