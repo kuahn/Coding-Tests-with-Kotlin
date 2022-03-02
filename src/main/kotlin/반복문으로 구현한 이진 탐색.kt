@@ -7,7 +7,7 @@ class `반복문으로 구현한 이진 탐색` {
         var result = 0
 
         while (start <= end ) {
-            val mid:Int = start + end % 2
+            val mid:Int = start + end / 2
 
             if (array[mid] == target) {
                 result = mid
